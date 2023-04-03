@@ -1,0 +1,12 @@
+# .slugignore
+
+# Exclude development files and directories
+src/
+public/
+
+# Exclude files that can be regenerated
+node_modules/
+package-lock.json
+
+# Include production build
+!dist/
