@@ -94,7 +94,7 @@ export const getUserLikedMovies = createAsyncThunk(
   async (email) => {
     const {
       data: { movies },
-    } = await axios.get(`https://netflixclone.herokuapp.com/api/user/liked/${email}`);
+    } = await axios.get(`https://mynetflix.herokuapp.com/api/user/liked/${email}`);
     return movies;
   }
 );
@@ -105,7 +105,7 @@ export const removeFromLikedMovies = createAsyncThunk(
     console.log(email);
     const {
       data: { movies },
-    } = await axios.put(`https://netflixclone.herokuapp.com/api/user/delete`, {
+    } = await axios.put(`https://mynetflix.herokuapp.com/api/user/delete`, {
       email,
       movieId,
     });
@@ -119,7 +119,7 @@ export const addToLiked = createAsyncThunk(
     console.log(movieData);
     console.log(email);
 
-    await axios.post(`https://netflixclone.herokuapp.com/api/user/add`, {
+    await axios.post(`https://mynetflix.herokuapp.com/api/user/add`, {
       email,
       data: movieData,
     });
