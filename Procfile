@@ -1,1 +1,2 @@
-web: node netflix-api/server.js
+web: npm run start
+  
